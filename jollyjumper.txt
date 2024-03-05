@@ -1,0 +1,28 @@
+Name:Piyush Mahajan
+Class: TY-B 223
+
+while True:
+    try:
+        a = list(map(int, input().split()))
+    except EOFError:
+        break
+
+    n = [0] * 3001
+
+    for i in range(2, len(a)):
+        m = abs(a[i] - a[i-1])
+        if n[m] and m and m < a[0]:
+            n[m] = 1
+
+    if sum(n) == a[0] - 1:
+        print("Jolly")
+    else:
+        print("Not jolly")
+
+sample input 
+4 1 4 2 3
+5 1 4 2 -1 6
+
+sample output
+Jolly
+Not jolly
