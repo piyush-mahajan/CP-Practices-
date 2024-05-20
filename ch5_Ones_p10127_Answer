@@ -44,3 +44,12 @@ if __name__ == '__main__':
             break
 
         print(find_ones(num))
+
+Sample Input
+3
+7
+9901
+Sample Output
+3
+6
+12
